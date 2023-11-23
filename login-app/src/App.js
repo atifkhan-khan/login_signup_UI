@@ -1,14 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import React, { Component } from 'react'
-
+import React from "react";
+import LoginPage from "./pages/login";
+import SignUp from "./pages/sign-up";
+import { useState } from "react";
 
 function App() {
-  const name = 'Atif'
+  const [navigateToLogin, setNavigate] = useState(true);
+
   return (
     <div>
-      {name}
+      <button onClick={() => setNavigate(!navigateToLogin)}>
+        Toggle Pages
+      </button>
+
+      {navigateToLogin ? <LoginPage /> : <SignUp />}
     </div>
   );
 }
