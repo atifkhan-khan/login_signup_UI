@@ -1,0 +1,36 @@
+.Top_container{
+  height: 100vh;
+  width: 100vw;
+  display: flex; /* or inline-flex */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(red 20%, 30%, blue 60%);
+  flex-direction: column;
+}
+
+.signUp-card{
+    height: 60%;
+    width: 30%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.signUp-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0px;
+}
+
+.signUp-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+    position: relative;
+}
+

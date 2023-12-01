@@ -1,22 +1,36 @@
 import "./App.css";
-
-import React from "react";
+import React, { useState } from "react";
 import LoginPage from "./pages/login";
 import SignUp from "./pages/sign-up";
-import { useState } from "react";
+import Dashboard from "./pages/adminPanel/dashboardPage";
 
 function App() {
-  const [navigateToLogin, setNavigate] = useState(true);
+   const [navigateToLogin, setNavigate] = useState(true);
+   
+  //const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
+
 
   return (
-    <div>
-      <button onClick={() => setNavigate(!navigateToLogin)}>
-        Toggle Pages
-      </button>
+   
+    //<div className="grid-container">
+    <div >
 
-      {navigateToLogin ? <LoginPage /> : <SignUp />}
+      {/* <HeaderPage OpenSidebar = {OpenSidebar} />
+      <SideBarPage openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <HomePage /> */}
+      <button onClick={() => setNavigate(!navigateToLogin)}>
+        {navigateToLogin ? "Sign Up" : "Login" }
+      </button>
+    
+
+      {navigateToLogin ? <LoginPage /> : <Dashboard />}
     </div>
   );
 }
+
 
 export default App;

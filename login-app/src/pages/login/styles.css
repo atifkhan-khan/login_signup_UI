@@ -83,3 +83,18 @@
   flex-direction: column;
   height: 100%;
 }
+
+
+.forget-container{
+  width: 100%;
+  padding-right: 30px;
+  padding-bottom: 55px;
+  justify-content: end;
+  flex-direction: row;
+  align-items: end;
+  display: flex;
+}
+
+.forget-text{
+  font-size: 13px;
+}

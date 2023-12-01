@@ -1,12 +1,8 @@
-import React from "react";
+import React from 'react'
 import Spacer from "../../Components/Spacer";
 
 
-const FormLogin = () => {
-  //const navigateToAdmin = useNavigate()
-  function navigatetoAdminPanel(){
-   // navigateToAdmin("../adminPanel/dashboard")
-  }
+function FormSignUp() {
   return (
     <form className="form-container">
       <div
@@ -22,6 +18,13 @@ const FormLogin = () => {
         <div className="input-element">
           <input
             className="input"
+            type={"full name"}
+            placeholder={"Full name"}
+          />
+        </div>
+        <div className="input-element">
+          <input
+            className="input"
             type={"email"}
             placeholder={"xyz@gmail.com"}
           />
@@ -30,22 +33,25 @@ const FormLogin = () => {
           <input
             className="input"
             type={"password"}
-            placeholder={"Enter your password"}
+            placeholder={"Enter password"}
+          />
+        </div>
+        <div className="input-element">
+          <input
+            className="input"
+            type={"password"}
+            placeholder={"Confirm password"}
           />
         </div>
       </div>
 
-      <div className="forget-container">
-        <text className="forget-text">Forget password</text>
-      </div>
-
       <Spacer />
 
-      <button className="login-button" onClick={navigatetoAdminPanel}>
-        Login
+      <button className="login-button" type="submit">
+        Sign Up
       </button>
     </form>
   );
-};
+}
 
-export default FormLogin;
+export default FormSignUp
